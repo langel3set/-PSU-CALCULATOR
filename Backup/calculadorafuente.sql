@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-03-2025 a las 21:47:13
+-- Tiempo de generación: 25-03-2025 a las 00:50:15
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -263,7 +263,7 @@ INSERT INTO `gpu_nvidia` (`IDGPU_N`, `NAME`, `VRAM`, `WATTS`) VALUES
 CREATE TABLE `procesadores` (
   `IDCPU` int(11) NOT NULL,
   `MARCA` varchar(10) NOT NULL,
-  `NOMBRE` varchar(25) NOT NULL,
+  `NAME` varchar(25) NOT NULL,
   `WATTS` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -271,7 +271,7 @@ CREATE TABLE `procesadores` (
 -- Volcado de datos para la tabla `procesadores`
 --
 
-INSERT INTO `procesadores` (`IDCPU`, `MARCA`, `NOMBRE`, `WATTS`) VALUES
+INSERT INTO `procesadores` (`IDCPU`, `MARCA`, `NAME`, `WATTS`) VALUES
 (107, 'Intel', 'Pentium 60 MHz', 14),
 (108, 'Intel', 'Pentium 66 MHz', 14),
 (109, 'Intel', 'Pentium 75 MHz', 16),
