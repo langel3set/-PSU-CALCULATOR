@@ -4,32 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>CALCULADORA PARA FUENTE</title>
 </head>
 <body>
-    <div class="container">
+    <div class="description">
         <h1>Calculadora de Consumo de Watts</h1>
-        <label>Tarjeta Gráfica:
-            <select id="gpu"></select>
-        </label><br>
-        <label>RAM:
-            <select id="ram"></select>
-        </label><br>
-        <label>Procesador:
-            <select id="cpu"></select>
-        </label><br>
-        <label>Placa Madre:
-            <select id="motherboard"></select>
-        </label><br>
-        <label>Cooler:
-            <select id="cooler"></select>
-        </label><br>
-        <label>Ventiladores del Case:
-            <select id="caseFans"></select>
-        </label><br>
-        <button onclick="calcularWatts()">Calcular Consumo</button>
-        <h3 id="totalWatts">Total: 0W</h3>
-        <canvas id="chart"></canvas>
+        <p>Este programa te ayuda a calcular el consumo total de watts de tu PC en función de sus componentes, 
+        recomendando fuentes de poder adecuadas para tu configuración.</p>
+    </div>
+    <div class="container">
+        <div class="left-panel">
+            <div class="box" id="gpuBox">
+                <label>Tarjeta Gráfica:
+                    <select id="gpu"></select>
+                </label>
+            </div>
+    
+            <div class="box" id="ramBox">
+                <label>Tipo de RAM:
+                    <select id="tipoRam"></select>
+                </label><br>
+                
+                <label>Tamaño de RAM:
+                    <select id="ram">
+                    </select>
+                </label><br>
+            </div>
+    
+            <div class="box" id="cpuBox">
+                <label>Procesador:
+                    <select id="cpu"></select>
+                </label>
+            </div>
+
+            <div class="box" id="coolerBox">
+                <label>Cooler:
+                    <select id="cooler"></select>
+                </label>
+            </div>
+    
+            <div class="box" id="caseFansBox">
+                <label>Ventiladores del Case:
+                    <select id="caseFans"></select>
+                </label>
+            </div>
+    
+            <button onclick="calcularWatts()">Calcular Consumo</button>
+            <h3 id="totalWatts">Total: 0W</h3>
+        </div>
+        <div class="right-panel">
+            <h2>Fuentes Recomendadas</h2>
+            <p>Aquí se mostrarán las fuentes de poder recomendadas según el consumo.</p>
+        </div>
     </div>
 </body>
 </html>

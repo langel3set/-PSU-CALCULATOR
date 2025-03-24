@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+.left-panel {
+    width: 50%;
+}
+
+.box {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+#gpuBox { background-color: #3498db; }      /* Azul */
+#ramBox { background-color: #2ecc71; }      /* Verde */
+#cpuBox { background-color: #e74c3c; }      /* Rojo */
+#motherboardBox { background-color: #f39c12; } /* Naranja */
+#coolerBox { background-color: #9b59b6; }   /* Púrpura */
+#caseFansBox { background-color: #34495e; } /* Gris Oscuro */
+
+.right-panel {
+    width: 55%;
+    background-color: #ecf0f1; /* Gris Claro */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #2c3e50; /* Azul Oscuro */
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #219150;
+}
