@@ -9,15 +9,11 @@ $username = "root";
 $password = "";
 $dbname = "calculadorafuente";
 
-// Conectar a la base de datos
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verificar conexión
 if ($conn->connect_error) {
     die(json_encode(["error" => "Conexión fallida: " . $conn->connect_error]));
 }
-
-// Obtener procesadores
 $sql = "SELECT NOMBRE FROM procesadores ORDER BY NOMBRE ASC";
 $result = $conn->query($sql);
 
