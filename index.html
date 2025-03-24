@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <title>CALCULADORA PARA FUENTE</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Consumo de Watts</h1>
+        <label>Tarjeta Gráfica:
+            <select id="gpu"></select>
+        </label><br>
+        <label>RAM:
+            <select id="ram"></select>
+        </label><br>
+        <label>Procesador:
+            <select id="cpu"></select>
+        </label><br>
+        <label>Placa Madre:
+            <select id="motherboard"></select>
+        </label><br>
+        <label>Cooler:
+            <select id="cooler"></select>
+        </label><br>
+        <label>Ventiladores del Case:
+            <select id="caseFans"></select>
+        </label><br>
+        <button onclick="calcularWatts()">Calcular Consumo</button>
+        <h3 id="totalWatts">Total: 0W</h3>
+        <canvas id="chart"></canvas>
+    </div>
+</body>
+</html>
