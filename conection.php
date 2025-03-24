@@ -14,14 +14,14 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die(json_encode(["error" => "Conexión fallida: " . $conn->connect_error]));
 }
-$sql = "SELECT NOMBRE FROM procesadores ORDER BY NOMBRE ASC";
+$sql = "SELECT NAME FROM procesadores ORDER BY NAME ASC";
 $result = $conn->query($sql);
 
 $procesadores = [];
 
 if ($result) {
     while ($row = $result->fetch_assoc()) {
-        $procesadores[] = $row['NOMBRE'];
+        $procesadores[] = $row['NAME'];
     }
     echo json_encode($procesadores);
 } else {
