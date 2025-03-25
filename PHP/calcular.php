@@ -42,11 +42,16 @@ foreach ($componentes as $componente) {
                 $totalWatts += (int) $row['watts'];
             }
         }
+        //falta sumar la ram
         $ram=[];
     }
 }
 
-echo json_encode(["total" => $totalWatts]);
+//rango de error para la fuente siempre recomiendo un 20% mas
+$resuladoFinal=round($totalWatts*1.2);
+
+
+echo json_encode(["total" => $resuladoFinal]);
 
 $conn->close();
 ?>

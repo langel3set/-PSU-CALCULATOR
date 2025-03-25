@@ -18,21 +18,22 @@
     font-weight: bold;
 }
 
-#gpuBox { background-color: #3498db; }      /* Azul */
-#ramBox { background-color: #2ecc71; }      /* Verde */
-#cpuBox { background-color: #e74c3c; }      /* Rojo */
-#motherboardBox { background-color: #f39c12; } /* Naranja */
-#coolerBox { background-color: #9b59b6; }   /* Púrpura */
-#caseFansBox { background-color: #34495e; } /* Gris Oscuro */
+#gpuBox { background-color: #3498db; }
+#ramBox { background-color: #2ecc71; }
+#cpuBox { background-color: #e74c3c; }
+#motherboardBox { background-color: #f39c12; }
+#coolerBox { background-color: #9b59b6; }
+#caseFansBox { background-color: #34495e; }
 
 .right-panel {
     width: 55%;
-    background-color: #ecf0f1; /* Gris Claro */
+    margin-left: 50px;
+    background-color: #ecf0f1;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     font-weight: bold;
-    color: #2c3e50; /* Azul Oscuro */
+    color: #2c3e50;
 }
 
 button {

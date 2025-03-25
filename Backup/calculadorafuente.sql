@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-03-2025 a las 00:50:15
+-- Tiempo de generación: 25-03-2025 a las 17:13:56
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -1241,6 +1241,7 @@ CREATE TABLE `ram` (
   `IDRAM` int(11) NOT NULL,
   `TIPO` varchar(10) NOT NULL,
   `TAMAÑO` int(11) NOT NULL,
+  `BYTE` varchar(2) NOT NULL,
   `WATTS` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -1248,36 +1249,36 @@ CREATE TABLE `ram` (
 -- Volcado de datos para la tabla `ram`
 --
 
-INSERT INTO `ram` (`IDRAM`, `TIPO`, `TAMAÑO`, `WATTS`) VALUES
-(1, 'DDR1', 128, 2),
-(2, 'DDR1', 256, 3),
-(3, 'DDR1', 512, 4),
-(4, 'DDR1', 1, 5),
-(5, 'DDR1', 2, 6),
-(6, 'DDR2', 256, 2),
-(7, 'DDR2', 512, 3),
-(8, 'DDR2', 1, 4),
-(9, 'DDR2', 2, 5),
-(10, 'DDR2', 4, 6),
-(11, 'DDR2', 8, 7),
-(12, 'DDR3', 1, 3),
-(13, 'DDR3', 2, 4),
-(14, 'DDR3', 4, 5),
-(15, 'DDR3', 8, 6),
-(16, 'DDR3', 16, 7),
-(17, 'DDR3', 32, 8),
-(18, 'DDR4', 4, 4),
-(19, 'DDR4', 8, 5),
-(20, 'DDR4', 16, 6),
-(21, 'DDR4', 32, 7),
-(22, 'DDR4', 64, 8),
-(23, 'DDR4', 128, 9),
-(24, 'DDR5', 8, 5),
-(25, 'DDR5', 16, 6),
-(26, 'DDR5', 32, 7),
-(27, 'DDR5', 64, 8),
-(28, 'DDR5', 128, 9),
-(29, 'DDR5', 256, 10);
+INSERT INTO `ram` (`IDRAM`, `TIPO`, `TAMAÑO`, `BYTE`, `WATTS`) VALUES
+(1, 'DDR1', 128, 'MB', 2),
+(2, 'DDR1', 256, 'MB', 3),
+(3, 'DDR1', 512, 'MB', 4),
+(4, 'DDR1', 1, 'GB', 5),
+(5, 'DDR1', 2, 'GB', 6),
+(6, 'DDR2', 256, 'MB', 2),
+(7, 'DDR2', 512, 'MB', 3),
+(8, 'DDR2', 1, 'GB', 4),
+(9, 'DDR2', 2, 'GB', 5),
+(10, 'DDR2', 4, 'GB', 6),
+(11, 'DDR2', 8, 'GB', 7),
+(12, 'DDR3', 1, 'GB', 3),
+(13, 'DDR3', 2, 'GB', 4),
+(14, 'DDR3', 4, 'GB', 5),
+(15, 'DDR3', 8, 'GB', 6),
+(16, 'DDR3', 16, 'GB', 7),
+(17, 'DDR3', 32, 'GB', 8),
+(18, 'DDR4', 4, 'GB', 4),
+(19, 'DDR4', 8, 'GB', 5),
+(20, 'DDR4', 16, 'GB', 6),
+(21, 'DDR4', 32, 'GB', 7),
+(22, 'DDR4', 64, 'GB', 8),
+(23, 'DDR4', 128, 'GB', 9),
+(24, 'DDR5', 8, 'GB', 5),
+(25, 'DDR5', 16, 'GB', 6),
+(26, 'DDR5', 32, 'GB', 7),
+(27, 'DDR5', 64, 'GB', 8),
+(28, 'DDR5', 128, 'GB', 9),
+(29, 'DDR5', 256, 'GB', 10);
 
 --
 -- Índices para tablas volcadas
