@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title>CALCULADORA PARA FUENTE</title>
 </head>
 <body>
+    <header>
+
+    </header>
     <div class="description">
         <h1>Calculadora de Consumo de Watts</h1>
         <p>Este programa te ayuda a calcular el consumo total de watts de tu PC en función de sus componentes, 
@@ -15,6 +19,7 @@
     </div>
     <div class="container">
         <div class="left-panel">
+            <h3>Elija sus componentes </h3>
             <div class="box" id="gpuBox">
                 <label>Tarjeta Gráfica:
                     <select id="gpu"></select>
@@ -58,5 +63,46 @@
             <p>Aquí se mostrarán las fuentes de poder recomendadas según el consumo.</p>
         </div>
     </div>
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>Compañia</h4>
+                    <ul>
+                        <li><a href="#">Acerca de...</a></li>
+                        <li><a href="#">Nuestos servicios</a></li>
+                        <li><a href="#">trabaja con nosotros</a></li>
+                        <li><a href="#">informacion legal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Envios</a></li>
+                        <li><a href="#">Compras</a></li>
+                        <li><a href="#">contactanos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Tienda</h4>
+                    <ul>
+                        <li><a href="#">Gráficas</a></li>
+                        <li><a href="#">procesadores</a></li>
+                        <li><a href="#">fuentes</a></li>
+                        <li><a href="#">memorias ram</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Siguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
