@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="/src/scripts/script.js" defer></script>
+    <link rel="stylesheet" href="/src/styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title>CALCULADORA PARA FUENTE</title>
 </head>
 <body>
-    <header>
-
+    <header class="header">
+        <div class="container-header">
+            <h1>Calculadora de Consumo de Watts</h1>
+        </div>
     </header>
     <div class="description">
-        <h1>Calculadora de Consumo de Watts</h1>
         <p>Este programa te ayuda a calcular el consumo total de watts de tu PC en función de sus componentes, 
         recomendando fuentes de poder adecuadas para tu configuración.</p>
     </div>
@@ -32,7 +33,7 @@
                 </label><br>
                 
                 <label>Tamaño de RAM:
-                    <select id="ram">
+                    <select id="ram" disabled>
                     </select>
                 </label><br>
             </div>
@@ -44,14 +45,27 @@
             </div>
 
             <div class="box" id="coolerBox">
-                <label>Cooler:
-                    <select id="cooler"></select>
+                <label>Cooler Tipo:
+                    <select id="coolerType">
+                        <option value="">Selecciona tipo</option>
+                        <option value="aire">Aire</option>
+                        <option value="liquida">Líquida</option>
+                    </select>
                 </label>
+                <div id="coolerUnitsBox">
+                    <label>Unidades de Cooler:
+                        <select id="coolerUnits" disabled>
+                            <option value="">Selecciona cantidad</option>
+                        </select>
+                    </label>
+                </div>
             </div>
-    
+            
             <div class="box" id="caseFansBox">
                 <label>Ventiladores del Case:
-                    <select id="caseFans"></select>
+                    <select id="caseFans">
+                        <option value="">Selecciona cantidad</option>
+                    </select>
                 </label>
             </div>
     
@@ -61,6 +75,18 @@
         <div class="right-panel">
             <h2>Fuentes Recomendadas</h2>
             <p>Aquí se mostrarán las fuentes de poder recomendadas según el consumo.</p>
+        </div>
+    </div>
+    <div class="faq">
+        <div class="container-faq">
+            <div class="faq-list">
+                <h4>PREGUNTAS FRECUENTES</h4>
+                <li class="faq-quest">¿Que fuente recomiendas para la ultima generacion?</li>
+                <li class="faq-quest">¿Que certificacion necesito para mi fuente?</li>
+                <li class="faq-quest">¿Que tipo de fuente necesito ATX, SFX, SFX-L o TFX?</li>
+                <li class="faq-quest">¿Es importante elejir la potencia correcta para una fuente?</li>
+                <li class="faq-quest">¿Que hago si no encuentro mi componente?</li>
+            </div>
         </div>
     </div>
     <footer class="footer">
