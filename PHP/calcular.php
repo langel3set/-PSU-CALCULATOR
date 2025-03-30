@@ -32,15 +32,29 @@
             switch ($componente) {
                 case "gpu": $tabla = "gpu_nvidia"; break;
                 case "cpu": $tabla = "procesadores"; break;
-                //por terminar
-                //case "cooler": $tabla = "cooler"; break;
-                //case "caseFans": $tabla = "case_fans"; break;
+                case "ram": $tabla = "ram"; break;
             }
+    
             if ($tabla) {
-                $sql = "SELECT watts FROM $tabla WHERE NAME = '$nombre'";
-                $result = $conn->query($sql);
-                if ($result && $row = $result->fetch_assoc()) {
-                    $totalWatts += (int) $row['watts'];
+                if ($tabla === "ram") {
+                    $tipoRam = $conn->real_escape_string($data['tipoRam'] ?? '');
+                    $tamanoRam = $conn->real_escape_string($data['ram'] ?? '');
+    
+                    if (!empty($tipoRam) && !empty($tamanoRam)) {
+                        $sql = "SELECT watts FROM ram WHERE tipo = '$tipoRam' AND tamano = '$tamanoRam'";
+                        $result = $conn->query($sql);
+                        
+                        if ($result && $row = $result->fetch_assoc()) {
+                            $totalWatts += (int) $row['watts'];
+                        }
+                    }
+                } else {
+                    $sql = "SELECT watts FROM $tabla WHERE NAME = '$nombre'";
+                    $result = $conn->query($sql);
+    
+                    if ($result && $row = $result->fetch_assoc()) {
+                        $totalWatts += (int) $row['watts'];
+                    }
                 }
             }
         }

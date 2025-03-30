@@ -18,14 +18,14 @@ if ($conn->connect_error) {
 $tipo = isset($_GET['tipo']) ? $conn->real_escape_string($_GET['tipo']) : '';
 
 if ($tipo) {
-    $sql = "SELECT DISTINCT TAMAÑO FROM ram WHERE TIPO = '$tipo' ORDER BY TAMAÑO ASC";
+    $sql = "SELECT DISTINCT TAMANO FROM ram WHERE TIPO = '$tipo' ORDER BY TAMANO ASC";
     $result = $conn->query($sql);
 
     $tamaños_ram = [];
 
     if ($result) {
         while ($row = $result->fetch_assoc()) {
-            $tamaños_ram[] = $row['TAMAÑO'];
+            $tamaños_ram[] = $row['TAMANO'];
         }
         echo json_encode($tamaños_ram);
     } else {

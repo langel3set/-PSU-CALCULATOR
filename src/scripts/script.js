@@ -18,13 +18,15 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("calcular").addEventListener("click", function () {
         let gpu = document.getElementById("gpu").value;
         let cpu = document.getElementById("cpu").value;
+        let ram = document.getElementById("ram").value; // Se agrega la RAM
+        let tipoRam = document.getElementById("tipoRam").value; // Se agrega el tipo de RAM
         let coolerUnits = parseInt(document.getElementById("coolerUnits").value) || 0;
         let caseFans = parseInt(document.getElementById("caseFans").value) || 0;
-
+        
         fetch("PHP/calcular.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ gpu, cpu })
+            body: JSON.stringify({ gpu, cpu, ram, tipoRam }) // Se envían todos los datos necesarios
         })
         .then(response => response.json())
         .then(data => {
